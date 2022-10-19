@@ -1,3 +1,5 @@
+require 'active_support/parameter_filter'
+
 class Grape::Middleware::Logger::Railtie < Rails::Railtie
   options = Rails::VERSION::MAJOR < 5 ? { after: :load_config_initializers } : {}
   initializer 'grape.middleware.logger', options do
